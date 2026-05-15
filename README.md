@@ -225,3 +225,164 @@ My long-term vision:
 * Syed Ayan Abbas
 * Amir Hasan
 Thanks to All of you ❤️
+<!-- 🔥 Futuristic Live Profile Animation -->
+<div class="hero">
+  <div class="stars"></div>
+
+  <h1 class="glow">Thanks for visiting</h1>
+
+  <p class="typing">
+    <span id="text"></span><span class="cursor">|</span>
+  </p>
+
+  <div class="floating-icons">
+    <span>⚡</span>
+    <span>💻</span>
+    <span>🚀</span>
+    <span>🔥</span>
+    <span>🛠️</span>
+  </div>
+</div>
+
+<style>
+body{
+  background:#000;
+}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:60px 20px;
+  text-align:center;
+  border-radius:20px;
+  background:linear-gradient(135deg,#050505,#0d1117,#001f3f);
+  box-shadow:0 0 30px #00f7ff55;
+  animation:bgmove 8s infinite alternate;
+}
+
+@keyframes bgmove{
+  0%{background-position:left;}
+  100%{background-position:right;}
+}
+
+.glow{
+  font-size:42px;
+  color:#00f7ff;
+  text-shadow:
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff,
+    0 0 40px #00f7ff;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+}
+
+.typing{
+  margin-top:20px;
+  font-size:22px;
+  color:white;
+  font-family:monospace;
+}
+
+.cursor{
+  color:#00f7ff;
+  animation:blink 0.8s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0;}
+}
+
+.floating-icons span{
+  position:absolute;
+  font-size:30px;
+  animation:float 6s linear infinite;
+  opacity:0.8;
+}
+
+.floating-icons span:nth-child(1){
+  left:10%;
+  animation-duration:7s;
+}
+.floating-icons span:nth-child(2){
+  left:30%;
+  animation-duration:9s;
+}
+.floating-icons span:nth-child(3){
+  left:50%;
+  animation-duration:6s;
+}
+.floating-icons span:nth-child(4){
+  left:70%;
+  animation-duration:8s;
+}
+.floating-icons span:nth-child(5){
+  left:90%;
+  animation-duration:10s;
+}
+
+@keyframes float{
+  0%{
+    bottom:-50px;
+    transform:translateX(0) rotate(0deg);
+  }
+  100%{
+    bottom:100%;
+    transform:translateX(-50px) rotate(360deg);
+  }
+}
+
+.stars{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(white 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:0.15;
+  animation:stars 20s linear infinite;
+}
+
+@keyframes stars{
+  from{transform:translateY(0);}
+  to{transform:translateY(-200px);}
+}
+</style>
+
+<script>
+const texts = [
+  "Electronics Repair Expert ⚡",
+  "PCB Repair Specialist 🔧",
+  "Tech Creator 🚀",
+  "Innovation Never Stops 🔥"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+  if(count === texts.length){
+    count = 0;
+  }
+
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("text").textContent = letter;
+
+  if(letter.length === currentText.length){
+    setTimeout(() => {
+      index = 0;
+      count++;
+      setTimeout(type, 500);
+    }, 2000);
+  } else {
+    setTimeout(type, 100);
+  }
+})();
+</script>
