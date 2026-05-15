@@ -225,3 +225,12 @@ My long-term vision:
 * Syed Ayan Abbas
 * Amir Hasan
 Thanks to All of you ❤️
+<!-- 🔥 Animated Neon Header -->
+<p align="center">
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=Welcome+To+My+GitHub+Profile;Electronics+%26+PCB+Repair+Expert;Arduino+%7C+Cybersecurity+%7C+Innovation;Building+Crazy+Tech+Projects+🔥" 
+    alt="Typing SVG" 
+  />
+</p>
+
+---
