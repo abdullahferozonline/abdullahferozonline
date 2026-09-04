@@ -1,0 +1,19 @@
+{
+  "name": "nova-digital-worlds",
+  "version": "1.0.0",
+  "description": "NOVA — a premium 3D interactive scrolling website built with vanilla JS, Three.js, GSAP and Lenis.",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes http-server . -p 5173 -c-1 -o",
+    "start": "npx --yes http-server . -p 5173 -c-1",
+    "serve": "python3 -m http.server 5173"
+  },
+  "keywords": [
+    "three.js",
+    "gsap",
+    "webgl",
+    "scroll",
+    "creative-development"
+  ],
+  "license": "MIT"
+}
