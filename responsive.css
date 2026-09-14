@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Responsive overrides
+   Breakpoints: 1280 / 1024 / 768 / 480 / 390 / 360
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  :root { --section-pad: clamp(4.5rem, 10vw, 8rem); }
+}
+
+@media (max-width: 1024px) {
+  .intro__grid,
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .intro__copy,
+  .about__copy { max-width: 60ch; }
+
+  .cards { grid-template-columns: 1fr; }
+
+  .timeline { grid-template-columns: repeat(3, 1fr); row-gap: 3rem; }
+  .timeline__line { display: none; }
+
+  .hero__headline { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: block; }
+
+  .hero__content { padding-top: 5rem; }
+
+  .scroll-indicator span:first-child {
+    writing-mode: horizontal-tb;
+  }
+
+  .section-title { margin-bottom: 2rem; }
+
+  .project { width: 82vw; }
+
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+
+  .footer__inner { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --gutter: 1.25rem;
+    --section-pad: 4.5rem;
+  }
+
+  .hero__actions { flex-direction: column; align-items: flex-start; }
+
+  .btn { width: 100%; justify-content: center; }
+
+  .hero__actions .btn { width: auto; }
+
+  .timeline { grid-template-columns: 1fr; row-gap: 2rem; }
+
+  .cta__heading { font-size: clamp(2.6rem, 12vw, 4rem); }
+}
+
+@media (max-width: 390px) {
+  .hero__sub { max-width: 100%; }
+  .project { width: 88vw; }
+}
+
+@media (max-width: 360px) {
+  .loader__bar { width: 60vw; }
+}
+
+/* ==========================================================================
+   Touch devices — disable custom cursor, restore default hover affordances
+   ========================================================================== */
+@media (hover: none), (pointer: coarse) {
+  .cursor { display: none !important; }
+  body { cursor: auto; }
+}
+
+/* Landscape phones: shrink min-heights so content isn't clipped */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero, .interactive, .cta { min-height: 100vh; }
+}
